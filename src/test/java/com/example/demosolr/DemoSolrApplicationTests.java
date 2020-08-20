@@ -30,9 +30,7 @@ class DemoSolrApplicationTests {
         try {
             solrClient.add(document);
             solrClient.commit();
-        } catch (SolrServerException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (SolrServerException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -44,9 +42,7 @@ class DemoSolrApplicationTests {
         try {
             QueryResponse response = solrClient.query(solrQuery);
             log.info(response.toString());
-        } catch (SolrServerException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (SolrServerException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -61,9 +57,7 @@ class DemoSolrApplicationTests {
         try {
             solrClient.add(document);
             solrClient.commit();
-        } catch (SolrServerException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (SolrServerException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -73,9 +67,7 @@ class DemoSolrApplicationTests {
         try {
             solrClient.deleteByQuery("id:02");
             solrClient.commit();
-        } catch (SolrServerException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (SolrServerException | IOException e) {
             e.printStackTrace();
         }
     }
